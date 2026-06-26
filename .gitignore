@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+artifacts/
+*.log
+.env
+.claude/
+.brigade/
+
+# Local Playwright login profile, if it ever lands under the repo
+profile/
+.canvas-cli-profile/

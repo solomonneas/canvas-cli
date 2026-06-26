@@ -1,0 +1,47 @@
+{
+  "name": "canvas-cli",
+  "version": "0.1.0",
+  "description": "Read-only Canvas LMS CLI that needs no API token - logs in via your browser once. For schools that disable Canvas API tokens.",
+  "author": "Solomon Neas <me@solomonneas.dev>",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "canvas-cli": "./dist/cli.js",
+    "canvasctl": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm test && npm run typecheck && npm run build"
+  },
+  "keywords": [
+    "canvas",
+    "canvas-lms",
+    "lms",
+    "cli",
+    "playwright",
+    "no-api-token"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
